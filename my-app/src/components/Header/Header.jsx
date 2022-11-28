@@ -1,8 +1,10 @@
-import React from 'react'
-import './Header.css'
-import { NavLink } from 'react-router-dom'
-import { Row, Container} from 'reactstrap'
+import React from 'react';
+import './Header.css';
 
+import { NavLink } from 'react-router-dom';
+import { Row, Container} from 'reactstrap';
+
+import bag from '../../assets/img/bag.png';
 export const Header = () => {
   return (
     <header>
@@ -34,7 +36,7 @@ export const Header = () => {
             </div>
             <div className='nav__icons'>
               <span className='cart__icon'>
-                <i class="ri-shopping-bag-3-line"></i>
+                <img src={bag} alt='bag'/>
               </span>
             </div>
           </div>
