@@ -1,30 +1,45 @@
 import React from 'react'
 import './Header.css'
+import { NavLink } from 'react-router-dom'
+import { Row, Container} from 'reactstrap'
 
 export const Header = () => {
   return (
     <header>
-      <nav class="navbar navbar-expand-lg navbar-light">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">Navbar</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNavDropdown">
-            <ul class="navbar-nav justify-content-center">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Features</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Pricing</a>
-              </li>
-            </ul>
+      <Container>
+        <Row>
+          <div className='nav__wrapper'>
+            <div className='logo'>
+              <img src='' alt='logo'/>
+              <div>
+                <h1>KANBUN</h1>
+                <p>Asian restaurant</p>
+              </div>
+            </div>
+            <div className='navigation'>
+              <ul className='menu'>
+                <li className='nav__item'>
+                  <NavLink>Home</NavLink>
+                </li>
+                <li className='nav__item'>
+                  <NavLink>Online</NavLink>
+                </li>
+                <li className='nav__item'>
+                  <NavLink>Restaurant</NavLink>
+                </li>
+                <li className='nav__item'>
+                  <NavLink>Sushis</NavLink>
+                </li>
+              </ul>
+            </div>
+            <div className='nav__icons'>
+              <span className='cart__icon'>
+                <i class="ri-shopping-bag-3-line"></i>
+              </span>
+            </div>
           </div>
-        </div>
-      </nav>
+        </Row>
+      </Container>
     </header>
   )
 }
