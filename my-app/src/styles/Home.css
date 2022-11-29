@@ -1,0 +1,45 @@
+video {
+    border-radius: 20px;
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+}
+.gradient{
+    border-radius: 20px;
+    position: absolute;
+    top: 77px;
+    width: 100%;
+    height: 111vh;
+    background: #1c1c1d;
+    opacity: 0.5;
+
+}
+.hero__section {
+    padding: 15px 0px;
+}
+.hero__section h2 {
+    color: #F9F9F9;
+    font-size: 4rem;
+    font-weight: 600;
+    margin: 20px 0px;
+}
+.hero__section p {
+    color: rgb(239, 251, 255);
+    line-height: 28px;
+}
+.hero__content{
+    position: relative;
+    top: -300%;
+    color: #F9F9F9;
+}
+.shop__btn{
+    font-weight: 700;
+    border: none;
+    outline: none;
+    padding: 10px 40px;
+    border-radius: 5px;
+    background-color:#FF9270 ;
+    color: #F9F9F9;
+    cursor: pointer;
+    font-size: 1rem;
+}

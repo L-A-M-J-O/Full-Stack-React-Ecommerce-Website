@@ -1,4 +1,5 @@
 import React from 'react'
+import '../styles/Home.css'
 
 import Helmet from '../components/Helmet/Helmet';
 
@@ -10,21 +11,20 @@ export const Home = () => {
   const year = new  Date().getFullYear();
   return <Helmet title={'Home'}>
     <section className='hero__section'>
+      <div className='content'>
+        <video autoPlay muted>
+          <source src={heroVideo} type='video/mp4'/>  
+        </video>
+        <div className='gradient'></div>
+      </div>
       <Container>
         <Row>
-          <Col lg='6' md='6'>
+          <Col lg='8' md='6'>
             <div className='hero__content'>
               <p className='hero_subtitle'>Nuestra historia {year}</p>
-              <h2>Kanbun es fusión, es innovación.</h2>
+              <h2><i>Kanbun es fusión, <br/> es innovación.</i></h2>
               <p>Se trata de una Taberna Oriental llena de historia, en la que generaciones de experiencia y devoción por la buena gastronomía se han unido para acercar a tu paladar los sabores más auténticos de Oriente y Occidente.</p>
-              <button>20% DTO PEDIDOS ONLINE</button>
-            </div>
-          </Col>
-          <Col lg='6' md='6'>
-            <div className="hero__img">
-            <video width='600' height='500' autoPlay muted>
-              <source src={heroVideo} type='video/mp4'/>  
-            </video>
+              <button className='shop__btn'>20% DTO PEDIDOS ONLINE</button>
             </div>
           </Col>
         </Row>
