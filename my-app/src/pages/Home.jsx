@@ -3,7 +3,7 @@ import React from 'react'
 import Helmet from '../components/Helmet/Helmet';
 
 import { Container, Row, Col  } from 'reactstrap';
-import heroVideo from '../assets/';
+import heroVideo from '../assets/video/hero.mp4';
 
 export const Home = () => {
 

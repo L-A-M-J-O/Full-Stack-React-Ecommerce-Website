@@ -4,6 +4,7 @@
     line-height: 70px;
 }
 .nav__wrapper{
+    margin-top: 1rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -14,12 +15,12 @@
     column-gap: 8px;
 }
 .logo img {
-    width: 3rem;
-    height: 3rem;
+    width: 1.8rem;
+    height: 1.8rem;
 }
 .logo  h1 {
-    font-size: 1.2rem;
-    font-weight: 700px;
+    font-size: 2rem;
+    font-weight: 600px;
     color: black;
 }
 .menu {
@@ -54,7 +55,7 @@
     width: 16px;
     height: 16px;
     content: '';
-    background: #000;
+    background: #FF9270;
     color: #fff;
     border-radius: 50px;
     display: flex;
