@@ -3,8 +3,27 @@ import './Header.css';
 
 import { NavLink } from 'react-router-dom';
 import { Row, Container} from 'reactstrap';
+import { motion } from 'framer-motion'
 
+
+import menu from '../../assets/img/menu.png';
+import fav from '../../assets/img/fav.png';
+import user from '../../assets/img/user.png';
 import bag from '../../assets/img/bag.png';
+const nav__links = [
+  {
+    path: 'home',
+    display: 'Home'
+  },
+  {
+    path: 'shop',
+    display: 'Shop'
+  },
+  {
+    path: 'cart',
+    display: 'Cart'
+  }
+]
 export const Header = () => {
   return (
     <header>
@@ -20,23 +39,31 @@ export const Header = () => {
             </div>
             <div className='navigation'>
               <ul className='menu'>
-                <li className='nav__item'>
-                  <NavLink>Home</NavLink>
-                </li>
-                <li className='nav__item'>
-                  <NavLink>Online</NavLink>
-                </li>
-                <li className='nav__item'>
-                  <NavLink>Restaurant</NavLink>
-                </li>
-                <li className='nav__item'>
-                  <NavLink>Sushis</NavLink>
-                </li>
+                {
+                  nav__links.map((element, index) => (
+                    <li className='nav__item' key={index}>
+                      <NavLink to={element.path} className={(navClass) => navClass.isActive ? 'nav__active' : ''}>{element.display}</NavLink>
+                    </li>
+                  ))
+                }
               </ul>
             </div>
             <div className='nav__icons'>
               <span className='cart__icon'>
+                <img src={fav} alt='fav'/>
+                <span className='badge'>1</span>
+              </span>
+              <span className='cart__icon'>
                 <img src={bag} alt='bag'/>
+                <span className='badge'>1</span>
+              </span>
+              <span className=''>
+                <motion.img whileTap={{scale: 1.2 }} src={user} alt='user'/>
+              </span>
+            </div>
+            <div className="mobile__menu">
+              <span>
+                <img src={menu} alt='menu'/>
               </span>
             </div>
           </div>
