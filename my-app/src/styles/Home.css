@@ -43,3 +43,6 @@ video {
     cursor: pointer;
     font-size: 1rem;
 }
+.link__a:hover{
+    color: #1c1c1d;
+}

@@ -1,9 +1,11 @@
 import React from 'react'
 import '../styles/Home.css'
 
+import { Link } from 'react-router-dom'
+import { Container, Row, Col  } from 'reactstrap';
+
 import Helmet from '../components/Helmet/Helmet';
 
-import { Container, Row, Col  } from 'reactstrap';
 import heroVideo from '../assets/video/hero.mp4';
 
 export const Home = () => {
@@ -24,7 +26,7 @@ export const Home = () => {
               <p className='hero_subtitle'>Nuestra historia {year}</p>
               <h2><i>Kanbun es fusión, <br/> es innovación.</i></h2>
               <p>Se trata de una Taberna Oriental llena de historia, en la que generaciones de experiencia y devoción por la buena gastronomía se han unido para acercar a tu paladar los sabores más auténticos de Oriente y Occidente.</p>
-              <button className='shop__btn'>20% DTO PEDIDOS ONLINE</button>
+              <button className='shop__btn'><Link className='link__a' to='shop'>20% DTO PEDIDOS ONLINE</Link></button>
             </div>
           </Col>
         </Row>
