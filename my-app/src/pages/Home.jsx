@@ -3,6 +3,7 @@ import React from 'react'
 import Helmet from '../components/Helmet/Helmet';
 
 import { Container, Row, Col  } from 'reactstrap';
+import heroVideo from '../assets/';
 
 export const Home = () => {
 
@@ -21,7 +22,9 @@ export const Home = () => {
           </Col>
           <Col lg='6' md='6'>
             <div className="hero__img">
-              <img src='' alt=''/>
+            <video width='600' height='500' autoPlay muted>
+              <source src={heroVideo} type='video/mp4'/>  
+            </video>
             </div>
           </Col>
         </Row>

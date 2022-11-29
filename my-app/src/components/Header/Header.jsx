@@ -5,7 +5,7 @@ import { NavLink } from 'react-router-dom';
 import { Row, Container} from 'reactstrap';
 import { motion } from 'framer-motion'
 
-
+import icon from '../../assets/img/icon.png';
 import menu from '../../assets/img/menu.png';
 import fav from '../../assets/img/fav.png';
 import user from '../../assets/img/user.png';
@@ -31,10 +31,9 @@ export const Header = () => {
         <Row>
           <div className='nav__wrapper'>
             <div className='logo'>
-              <img src='' alt='logo'/>
+              <img src={icon} alt='logo'/>
               <div>
-                <h1>KANBUN</h1>
-                <p>Asian restaurant</p>
+                <h1>KANBUN</h1> 
               </div>
             </div>
             <div className='navigation'>
