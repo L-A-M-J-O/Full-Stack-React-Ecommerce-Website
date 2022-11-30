@@ -1,6 +1,8 @@
 import React, {useState, useEffect} from 'react'
 import '../styles/Home.css'
 
+import plato from '../assets/img/platon.png';
+
 import { Link } from 'react-router-dom'
 import { Container, Row, Col  } from 'reactstrap';
 import foods from '../assets/Data/foods';
@@ -75,7 +77,7 @@ export const Home = () => {
         <Row>
           <Col lg='6' md='6'></Col>
           <Col lg='6' md='6' className='text-end'>
-            <img width={700} src='https://www.pngfind.com/pngs/m/80-809829_comida-china-png-platos-comida-china-png-transparent.png' alt='img'/>
+            <img src={plato} alt='img'/>
           </Col>
         </Row>
       </Container>
