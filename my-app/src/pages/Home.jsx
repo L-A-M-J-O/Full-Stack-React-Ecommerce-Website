@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom'
 import { Container, Row, Col  } from 'reactstrap';
 
 import Helmet from '../components/Helmet/Helmet';
+import ProductsList from '../components/UI/ProductsList';
 
 import heroVideo from '../assets/video/hero.mp4';
 import { Services } from '../services/Services';
@@ -36,9 +37,10 @@ export const Home = () => {
     <section className='trending__products'>
       <Container>
         <Row>
-          <Col lg='12' className='text-center'>
+          <Col lg='12'  className='text-center mb-5'>
             <h2 className='section__title'>Alimentos</h2>
           </Col>
+          <ProductsList/>
         </Row>
       </Container>
     </section>

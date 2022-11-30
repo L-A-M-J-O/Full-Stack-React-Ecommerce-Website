@@ -18,3 +18,7 @@ a {
 section {
   padding: 60px 0px;
 }
+.section__title {
+  color: #1c1c1c;
+  font-weight: 600;
+}
