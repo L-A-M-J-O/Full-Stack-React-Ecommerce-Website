@@ -74,8 +74,8 @@ export const Home = () => {
       <Container>
         <Row>
           <Col lg='6' md='6'></Col>
-          <Col lg='6' md='6'>
-            <img src='https://static.wixstatic.com/media/ecc2d4_72e3464587b5412f971ff8b141b8fb70~mv2.jpg/v1/fill/w_1080,h_350,al_c,q_85,enc_auto/ecc2d4_72e3464587b5412f971ff8b141b8fb70~mv2.jpg' alt=''/>
+          <Col lg='6' md='6' className='text-end'>
+            <img width={700} src='https://www.pngfind.com/pngs/m/80-809829_comida-china-png-platos-comida-china-png-transparent.png' alt='img'/>
           </Col>
         </Row>
       </Container>
