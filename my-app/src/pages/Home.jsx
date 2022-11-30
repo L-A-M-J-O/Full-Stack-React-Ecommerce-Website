@@ -1,8 +1,9 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 import '../styles/Home.css'
 
 import { Link } from 'react-router-dom'
 import { Container, Row, Col  } from 'reactstrap';
+import foods from '../assets/Data/foods';
 
 import Helmet from '../components/Helmet/Helmet';
 import ProductsList from '../components/UI/ProductsList';
@@ -11,8 +12,19 @@ import heroVideo from '../assets/video/hero.mp4';
 import { Services } from '../services/Services';
 
 export const Home = () => {
-
+  
+  const [comidas, setComidas] = useState([]);
+  const [cenas, setCenas] = useState([]);
   const year = new  Date().getFullYear();
+
+  useEffect (() => {
+    const filterComidas = foods.filter(element => element.category === 'chair');
+    const filterdCenas = foods.filter(element => element.category === 'sofa');
+
+    setComidas (filterComidas);
+    setCenas (filterdCenas);
+  }, []);
+
   return <Helmet title={'Home'}>
     <section className='hero__section'>
       <Container>
@@ -33,16 +45,40 @@ export const Home = () => {
         </Row>
       </Container>
     </section>
+
     <Services/>
+
     <section className='trending__products'>
       <Container>
         <Row>
           <Col lg='12'  className='text-center mb-5'>
-            <h2 className='section__title'>Alimentos</h2>
+            <h2 className='section__title'>Comidas</h2>
           </Col>
-          <ProductsList/>
+          <ProductsList data={comidas}/>
+        </Row>
+      </Container>
+    </section>
+
+    <section className='best__sales'>
+      <Container>
+        <Row>
+          <Col lg='12'  className='text-center mb-5'>
+            <h2 className='section__title'>Cenas</h2>
+          </Col>
+          <ProductsList data={cenas}/>
+        </Row>
+      </Container>
+    </section>
+
+    <section className='timer__count'>
+      <Container>
+        <Row>
+          <Col lg='6' md='6'></Col>
+          <Col lg='6' md='6'>
+            <img src='https://static.wixstatic.com/media/ecc2d4_72e3464587b5412f971ff8b141b8fb70~mv2.jpg/v1/fill/w_1080,h_350,al_c,q_85,enc_auto/ecc2d4_72e3464587b5412f971ff8b141b8fb70~mv2.jpg' alt=''/>
+          </Col>
         </Row>
       </Container>
     </section>
   </Helmet> 
-}
+} 

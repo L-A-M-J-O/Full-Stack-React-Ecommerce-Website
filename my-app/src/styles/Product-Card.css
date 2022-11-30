@@ -22,3 +22,6 @@
     color: #fff;
     border-radius: 50%;
 }
+.product__info a:hover {
+    color: inherit;
+}
