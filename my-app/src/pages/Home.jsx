@@ -36,7 +36,7 @@ export const Home = () => {
     <section className='trending__products'>
       <Container>
         <Row>
-          <Col lg='12'>
+          <Col lg='12' className='text-center'>
             <h2 className='section__title'>Alimentos</h2>
           </Col>
         </Row>
