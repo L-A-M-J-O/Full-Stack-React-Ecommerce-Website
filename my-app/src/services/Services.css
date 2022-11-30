@@ -1,0 +1,154 @@
+.service__item {
+    padding: 20px;
+    background:#DBEF98;
+    display: flex;
+    align-items: center;
+    column-gap: 0.5rem;
+    border-radius: 5px;
+}
+.service__item span img {
+    width: 100%;
+}
+:root {
+    --surface-color: #fff;
+    --curve: 40;
+  }
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 4rem 5vw;
+    padding: 0;
+    list-style-type: none;
+  }
+  
+  .card {
+    position: relative;
+    display: block;
+    height: 100%;  
+    border-radius: calc(var(--curve) * 1px);
+    overflow: hidden;
+    text-decoration: none;
+  }
+  
+  .card__image {      
+    width: 100%;
+    height: auto;
+  }
+  .card__overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;      
+    border-radius: calc(var(--curve) * 1px);    
+    background-color: var(--surface-color);      
+    transform: translateY(100%);
+    transition: .2s ease-in-out;
+  }
+  
+  .card:hover .card__overlay {
+    transform: translateY(0);
+  }
+  
+  .card__header {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 2em;
+    padding: 1em;
+    border-radius: calc(var(--curve) * 1px) 0 0 0;    
+    background-color: var(--surface-color);
+    transform: translateY(-100%);
+    transition: .2s ease-in-out;
+  }
+  
+  .card__arc {
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    bottom: 100%;
+    right: 0;      
+    z-index: 1;
+  }
+  
+  .card__arc path {
+    fill: var(--surface-color);
+  }       
+  
+  .card:hover .card__header {
+    transform: translateY(0);
+  }
+  
+  .card__thumb {
+    flex-shrink: 0;
+    width: 25px;
+    height: 25px;      
+    border-radius: 50%;      
+  }
+  
+  .card__title {
+    font-size: 1em;
+    margin: 0 0 .3em;
+    color: #1c1c1c;
+  }
+  
+  .card__tagline {
+    display: block;
+    margin: 1em 0;
+    font-family: "MockFlowFont";  
+    font-size: .8em; 
+    color: #222222;  
+  }
+  
+  .card__status {
+    font-size: .8em;
+    color: #1c1c1c;
+  }
+  
+  .card__description {
+    padding: 0 2em 2em;
+    margin: 0;
+    color: #222222; 
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+  }    
+
+.btn__menu{
+    margin-left: 2px;
+    font-weight: 600;
+    border: none;
+    outline: none;
+    padding: 7px 10px;
+    border-radius: 5px;
+    background-color:#DBEF98 ;
+    color: #1c1c1d;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+.btn__reserva{
+    margin-left: 2px;
+    font-weight: 600;
+    border: none;
+    outline: none;
+    padding: 7px 10px;
+    border-radius: 5px;
+    background-color:#DBEF98 ;
+    color: #1c1c1d;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+.btn__carta{
+    margin-left: 2px;
+    font-weight: 600;
+    border: none;
+    outline: none;
+    padding: 7px 10px;
+    border-radius: 5px;
+    background-color:#DBEF98 ;
+    color: #1c1c1d;
+    cursor: pointer;
+    font-size: 0.9rem;
+}

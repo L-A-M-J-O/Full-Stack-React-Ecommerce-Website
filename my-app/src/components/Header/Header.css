@@ -4,7 +4,7 @@
     line-height: 70px;
 }
 .nav__wrapper{
-    margin-top: 1rem;
+    margin: 1.2rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -55,14 +55,14 @@
     width: 16px;
     height: 16px;
     content: '';
-    background: #FF9270;
-    color: #fff;
+    background: #EFF5F5;
+    color: #1c1c1c;
     border-radius: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
     font-style: 0.7rem;
-    font-weight: 600;
+    font-weight: 700;
     z-index: 10;
 }
 .nav__icons span img {

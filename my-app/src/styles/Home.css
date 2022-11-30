@@ -4,33 +4,19 @@ video {
     height: 100%;
     object-fit:cover;
 }
-.gradient{
-    border-radius: 20px;
-    position: absolute;
-    top: 77px;
-    width: 100%;
-    height: 111vh;
-    background: #1c1c1d;
-    opacity: 0.5;
-
-}
 .hero__section {
-    padding: 15px 0px;
+    background-color: #EFF5F5;
 }
 .hero__section h2 {
-    color: #F9F9F9;
+    color: #1c1c1d;
     font-size: 4rem;
     font-weight: 600;
     margin: 20px 0px;
 }
 .hero__section p {
-    color: rgb(239, 251, 255);
+    font-family: 'Mukta', sans-serif;
+    color: #1c1c1d;
     line-height: 28px;
-}
-.hero__content{
-    position: relative;
-    top: -300%;
-    color: #F9F9F9;
 }
 .shop__btn{
     font-weight: 700;
@@ -38,8 +24,8 @@ video {
     outline: none;
     padding: 10px 40px;
     border-radius: 5px;
-    background-color:#FF9270 ;
-    color: #F9F9F9;
+    background-color:#DBEF98 ;
+    color: #1c1c1d;
     cursor: pointer;
     font-size: 1rem;
 }
