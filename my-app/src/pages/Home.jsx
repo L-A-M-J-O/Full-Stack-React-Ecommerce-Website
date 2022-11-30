@@ -1,12 +1,13 @@
 import React, {useState, useEffect} from 'react'
 import '../styles/Home.css'
 
-import plato from '../assets/img/platon.png';
+import plato from '../assets/img/plato.png';
 
 import { Link } from 'react-router-dom'
 import { Container, Row, Col  } from 'reactstrap';
 import foods from '../assets/Data/foods';
 
+import {Clock} from '../components/UI/Clock';
 import Helmet from '../components/Helmet/Helmet';
 import ProductsList from '../components/UI/ProductsList';
 
@@ -75,9 +76,16 @@ export const Home = () => {
     <section className='timer__count'>
       <Container>
         <Row>
-          <Col lg='6' md='6'></Col>
+          <Col lg='6' md='6'>
+            <div className='clock__top-content'>
+              <h4>Limited Offers</h4>
+              <h3>Quality Armchair</h3>
+            </div>
+            <Clock/>
+            <button className='buy__btn store__btn'><Link>Visit Store</Link></button>
+          </Col>
           <Col lg='6' md='6' className='text-end'>
-            <img src={plato} alt='img'/>
+            <img className='plato' src={plato} alt='img'/>
           </Col>
         </Row>
       </Container>
