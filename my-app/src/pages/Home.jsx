@@ -18,14 +18,22 @@ export const Home = () => {
   
   const [comidas, setComidas] = useState([]);
   const [cenas, setCenas] = useState([]);
+  const [mobileProductos, setMobileProductos] = useState([]);
+  const [wirelessProductos, setWirelessProductos] = useState([]);
+
   const year = new  Date().getFullYear();
 
   useEffect (() => {
     const filterComidas = foods.filter(element => element.category === 'chair');
     const filterdCenas = foods.filter(element => element.category === 'sofa');
+    const filterdMobileProductos = foods.filter(element => element.category === 'mobile');
+    const filterdWirelessProductos = foods.filter(element => element.category === 'wireless');
 
     setComidas (filterComidas);
     setCenas (filterdCenas);
+    setMobileProductos(filterdMobileProductos);
+    setWirelessProductos(filterdWirelessProductos);
+
   }, []);
 
   return <Helmet title={'Home'}>
@@ -48,9 +56,7 @@ export const Home = () => {
         </Row>
       </Container>
     </section>
-
     <Services/>
-
     <section className='trending__products'>
       <Container>
         <Row>
@@ -61,7 +67,6 @@ export const Home = () => {
         </Row>
       </Container>
     </section>
-
     <section className='best__sales'>
       <Container>
         <Row>
@@ -72,7 +77,6 @@ export const Home = () => {
         </Row>
       </Container>
     </section>
-
     <section className='timer__count'>
       <Container>
         <Row>
@@ -87,6 +91,28 @@ export const Home = () => {
           <Col lg='6' md='6' className='text-end'>
             <img className='plato' src={plato} alt='img'/>
           </Col>
+        </Row>
+      </Container>
+    </section>
+    <section className='new__arrivals'>
+    <Container>
+        <Row>
+          <Col lg='12' className='text-center'>
+            <h2 className='section__title'>New Arrivals</h2>
+          </Col>
+          <ProductsList data={mobileProductos}/>
+          <ProductsList data={wirelessProductos}/>
+        </Row>
+      </Container>
+    </section>
+    <section className='popular__category'>
+    <Container>
+        <Row>
+          <Col lg='12' className='text-center'>
+            <h2 className='section__title'>Polaridad y categoria</h2>
+          </Col>
+          <ProductsList data={mobileProductos}/>
+          <ProductsList data={wirelessProductos}/>
         </Row>
       </Container>
     </section>
